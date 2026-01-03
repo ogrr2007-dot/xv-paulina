@@ -712,3 +712,13 @@ section h3{
     font-size:1.4rem;
   }
 }
+
+/* PREMIUM FX – injected */
+.fx-hover{
+  transform: translateY(-6px);
+  box-shadow: 0 25px 55px rgba(198,166,100,.35);
+}
+.fx-active{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(198,166,100,.22);
+}

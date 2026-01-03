@@ -180,3 +180,31 @@ function slideRight(){
     behavior:'smooth'
   });
 }
+
+
+// ================= PREMIUM FX (NO NEW FILES) =================
+
+// Hover effect for countdown items
+const fxHoverTargets = document.querySelectorAll(
+  '.countdown div, .contador div, .count-box, section div'
+);
+
+fxHoverTargets.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    el.classList.add('fx-hover');
+  });
+  el.addEventListener('mouseleave', () => {
+    el.classList.remove('fx-hover');
+  });
+});
+
+// Scroll active highlight
+const fxObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle('fx-active', entry.isIntersecting);
+  });
+}, { threshold: 0.55 });
+
+fxHoverTargets.forEach(el => fxObserver.observe(el));
+
+// =============================================================
