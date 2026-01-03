@@ -423,24 +423,292 @@ body > *{
 }
 
 
-/* === GLITTER SUTIL HERO (OPCION IDEAL) === */
-.hero{
-  position:relative;
-  overflow:hidden;
+/* === MISMO CONTENEDOR TARJETAS === */
+.details{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
 }
 
-.glitter-overlay{
-  position:absolute;
-  inset:0;
-  background:url('../assets/glitter.jpg') center/cover no-repeat;
-  opacity:0.12;
-  filter: blur(12px);
-  mix-blend-mode: screen;
-  pointer-events:none;
-  z-index:0;
+@media(max-width:992px){
+  .details{
+    grid-template-columns:1fr;
+  }
 }
 
-.hero > *{
+
+/* ===== ESTILO PREMIUM GLOBAL ===== */
+body{
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Secciones con más aire */
+section{
+  padding:90px 20px;
+}
+
+/* ===== TARJETAS PREMIUM ===== */
+.details .card{
+  background:linear-gradient(180deg,#ffffff 0%,#f6fbff 100%);
+  border-radius:22px;
+  border:1px solid rgba(47,119,167,.25);
+  box-shadow:
+    0 20px 40px rgba(47,119,167,.15),
+    inset 0 1px 0 rgba(255,255,255,.9);
+  padding:45px 35px;
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+
+.details .card:hover{
+  transform:translateY(-8px);
+  box-shadow:
+    0 30px 60px rgba(47,119,167,.25),
+    inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+/* Iconos */
+.details .card i{
+  font-size:42px;
+  color:#2f77a7;
+  margin-bottom:18px;
+}
+
+/* Titulos */
+.details .card h4{
+  font-size:1.15rem;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+
+/* Texto */
+.details .card p{
+  font-size:1rem;
+  line-height:1.6;
+  color:#3b4a5a;
+}
+
+/* Botones */
+.details .card .btn,
+.details .card a{
+  margin-top:22px;
+}
+
+/* ===== CONTADOR PREMIUM ===== */
+.countdown div{
+  background:linear-gradient(180deg,#ffffff,#eaf5fc);
+  box-shadow:0 12px 25px rgba(0,0,0,.15);
+  border-radius:40px;
+  font-weight:600;
+}
+
+/* ===== TITULOS SECCION ===== */
+section h3{
+  font-size:1.6rem;
+  letter-spacing:.08em;
+}
+
+/* ===== TRANSICIONES SUAVES ===== */
+*{
+  transition:background .3s ease, color .3s ease;
+}
+
+
+/* ===== AJUSTE FINAL BORDES TARJETAS ===== */
+.details .card{
+  border:2px solid #f2c641; /* amarillo original */
+  border-radius:28px;       /* más suave y premium */
+}
+
+
+/* ===== COUNTDOWN PREMIUM ===== */
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-top:40px;
+}
+
+.countdown div{
+  min-width:120px;
+  padding:22px 18px;
+  background:linear-gradient(180deg,#ffffff 0%, #eef7fd 100%);
+  border-radius:30px;
+  border:1.5px solid rgba(47,119,167,.25);
+  box-shadow:
+    0 18px 35px rgba(47,119,167,.18),
+    inset 0 1px 0 rgba(255,255,255,.95);
+  text-align:center;
+}
+
+.countdown div span{
+  display:block;
+  font-size:2.2rem;
+  font-weight:700;
+  color:#2f77a7;
+  margin-bottom:6px;
+}
+
+.countdown div small{
+  font-size:.85rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#6b8fa8;
+}
+
+/* Mobile refinement */
+@media(max-width:768px){
+  .countdown{
+    gap:15px;
+  }
+  .countdown div{
+    min-width:85px;
+    padding:18px 12px;
+    border-radius:24px;
+  }
+  .countdown div span{
+    font-size:1.6rem;
+  }
+}
+
+
+/* ===== FIX FALTAN CENTRADO Y RESPONSIVO ===== */
+.faltan,
+.faltan h3{
+  text-align:center;
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;              /* responsive */
+  gap:20px;
+  max-width:900px;
+  margin:35px auto 0;
+}
+
+.countdown div{
+  flex:1 1 120px;              /* adaptable */
+  max-width:160px;
+}
+
+@media(max-width:480px){
+  .countdown{
+    gap:12px;
+  }
+  .countdown div{
+    flex:1 1 45%;
+    max-width:none;
+  }
+}
+
+
+/* ===== CORRECCION VISUAL FALTAN ===== */
+.faltan{
+  background:none !important;
+  padding-top:60px;
+  padding-bottom:60px;
+}
+
+.faltan h3{
+  margin-bottom:30px;
   position:relative;
-  z-index:1;
+  z-index:2;
+}
+
+.countdown{
+  background:none;
+  box-shadow:none;
+}
+
+.countdown div{
+  background:linear-gradient(180deg,#ffffff 0%, #eef7fd 100%);
+  border-radius:50px;
+  box-shadow:0 10px 22px rgba(47,119,167,.18);
+}
+
+
+/* ===== FALTAN: LAYOUT LIMPIO + ESTILO PREMIUM ===== */
+.faltan{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.faltan h3{
+  font-size:1.4rem;
+  letter-spacing:.08em;
+  margin-bottom:35px;
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:22px;
+}
+
+.countdown div{
+  background:linear-gradient(180deg,#ffffff 0%, #eaf5fc 100%);
+  border-radius:999px;
+  padding:22px 26px;
+  min-width:130px;
+  box-shadow:
+    0 12px 25px rgba(47,119,167,.18),
+    inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+.countdown div span{
+  font-size:2rem;
+  font-weight:700;
+  color:#2f77a7;
+}
+
+.countdown div small{
+  display:block;
+  margin-top:4px;
+  font-size:.8rem;
+  letter-spacing:.12em;
+  color:#6b8fa8;
+}
+
+@media(max-width:600px){
+  .countdown div{
+    min-width:45%;
+    padding:18px 20px;
+  }
+  .countdown div span{
+    font-size:1.6rem;
+  }
+}
+
+
+/* ===== CONTADOR SIEMPRE EN UNA SOLA FILA ===== */
+.countdown{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:nowrap;       /* nunca baja */
+  gap:18px;
+}
+
+.countdown div{
+  flex:0 1 auto;
+  min-width:90px;         /* se reduce en pantallas pequeñas */
+  padding:18px 16px;
+}
+
+@media(max-width:480px){
+  .countdown{
+    gap:12px;
+  }
+  .countdown div{
+    min-width:70px;
+    padding:14px 12px;
+  }
+  .countdown span{
+    font-size:1.4rem;
+  }
 }
