@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XV Años Paulina</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<canvas class="sparkles"></canvas>
+
+<audio id="bgMusic" loop>
+  <source src="assets/1.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">
+  <i class="fa-solid fa-music"></i>
+</button>
+
+<header class="hero sparkle">
+  <img src="assets/corona.png" alt="Corona" class="crown">
+  <h1>XV Años</h1>
+  <h2>Paulina</h2>
+</header>
+
+<section class="invite fade">
+  <h3>¡Estás invitado!</h3>
+  <p>Nos encantaría que seas parte de este momento tan especial para nosotros.</p>
+  <div class="date">31 · 01 · 26
+      </div>
+      <button class="arrow right" onclick="slideRight()">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+  </div>
+
+
+<section class="countdown fade">
+  <h3>Faltan</h3>
+  <div id="timer">
+    <div><span id="days"></span><small>Días</small></div>
+    <div><span id="hours"></span><small>Horas</small></div>
+    <div><span id="minutes"></span><small>Min</small></div>
+    <div><span id="seconds"></span><small>Seg</small></div>
+  
+      </div>
+      <button class="arrow right" onclick="slideRight()">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+  </div>
+
+
+<section class="details fade">
+  <div class="card">
+    <i class="fa-solid fa-church"></i>
+    <h4>Ceremonia religiosa</h4>
+    <p>Basílica Menor de Nuestra Señora de los Dolores<br>Mascota, Jalisco<br><strong>17:00 hrs</strong></p>
+    <a class="btn" href="https://www.google.com/maps?q=Basílica+Menor+de+Nuestra+Señora+de+los+Dolores+Mascota+Jalisco" target="_blank">
+      <i class="fa-solid fa-location-dot"></i> Ver ubicación
+    </a>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-champagne-glasses"></i>
+    <h4>Recepción</h4>
+    <p>Jardín de eventos El Edén<br>Leandro Valle 50, Mascota, Jalisco<br><strong>18:30 hrs</strong></p>
+    <a class="btn" href="https://www.google.com/maps?q=Jardín+de+eventos+El+Edén+Mascota+Jalisco" target="_blank">
+      <i class="fa-solid fa-location-dot"></i> Ver ubicación
+    </a>
+  
+      </div>
+      <button class="arrow right" onclick="slideRight()">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+  </div>
+
+
+<section class="dress fade">
+  <h4><i class="fa-solid fa-user-tie"></i> Código de vestimenta</h4>
+  <p><strong>Formal</strong><br>Color azul reservado para la quinceañera</p>
+  <p class="note"><i class="fa-solid fa-ban"></i> No niños</p>
+</section>
+
+<section class="gallery advanced-gallery">
+  <h3>Momentos mágicos</h3>
+  
+    <div class="slider-wrapper">
+      <button class="arrow left" onclick="slideLeft()">&#10094;</button>
+      <div class="slider-track">
+    
+    <img src="assets/IMG_1610.jpg">
+  <img src="assets/IMG_1611.jpg">
+<img src="assets/IMG_1634.jpg">
+<img src="assets/IMG_1643.jpg">
+<img src="assets/IMG_1658.jpg">
+<img src="assets/IMG_1659.jpg">
+
+  
+      </div>
+      <button class="arrow right" onclick="slideRight()">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+  </div>
+
+
+<section class="map fade">
+  <h3>Ubicación general</h3>
+  <iframe src="https://www.google.com/maps?q=Mascota+Jalisco&output=embed"></iframe>
+</section>
+
+<section class="rsvp fade">
+  <h3>Confirmar asistencia</h3>
+  <p>Antes del <strong>20 de enero</strong></p>
+  <a href="https://wa.me/523881032043" target="_blank" class="btn-wp">
+    <i class="fa-brands fa-whatsapp"></i> Confirmar por WhatsApp
+  </a>
+</section>
+
+<footer>
+  <p>✨ Una noche mágica comienza a las 12 ✨</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
