@@ -421,3 +421,26 @@ body > *{
   opacity:1 !important;
   pointer-events:auto !important;
 }
+
+
+/* === GLITTER SUTIL HERO (OPCION IDEAL) === */
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+
+.glitter-overlay{
+  position:absolute;
+  inset:0;
+  background:url('../assets/glitter.jpg') center/cover no-repeat;
+  opacity:0.12;
+  filter: blur(12px);
+  mix-blend-mode: screen;
+  pointer-events:none;
+  z-index:0;
+}
+
+.hero > *{
+  position:relative;
+  z-index:1;
+}
